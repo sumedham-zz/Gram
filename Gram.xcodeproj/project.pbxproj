@@ -7,14 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B921530142356CA2807E8FAC /* Pods_Gram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6F87B88669CE97C929A3354 /* Pods_Gram.framework */; };
 		FC2366AC1D188F7B007A060E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2366AB1D188F7B007A060E /* AppDelegate.swift */; };
 		FC2366AE1D188F7B007A060E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2366AD1D188F7B007A060E /* ViewController.swift */; };
 		FC2366B11D188F7B007A060E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC2366AF1D188F7B007A060E /* Main.storyboard */; };
 		FC2366B31D188F7B007A060E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC2366B21D188F7B007A060E /* Assets.xcassets */; };
 		FC2366B61D188F7B007A060E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC2366B41D188F7B007A060E /* LaunchScreen.storyboard */; };
+		FC2366C01D1892F2007A060E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2366BF1D1892F2007A060E /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		70934CE0ACF808CB996E188A /* Pods-Gram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gram.release.xcconfig"; path = "Pods/Target Support Files/Pods-Gram/Pods-Gram.release.xcconfig"; sourceTree = "<group>"; };
+		9F8A9894B93C8B07545C9B18 /* Pods-Gram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gram.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Gram/Pods-Gram.debug.xcconfig"; sourceTree = "<group>"; };
+		D6F87B88669CE97C929A3354 /* Pods_Gram.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Gram.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC2366A81D188F7B007A060E /* Gram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC2366AB1D188F7B007A060E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC2366AD1D188F7B007A060E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +27,7 @@
 		FC2366B21D188F7B007A060E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FC2366B51D188F7B007A060E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FC2366B71D188F7B007A060E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FC2366BF1D1892F2007A060E /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +35,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B921530142356CA2807E8FAC /* Pods_Gram.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		30027DB7BFA772B02457EDC4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9F8A9894B93C8B07545C9B18 /* Pods-Gram.debug.xcconfig */,
+				70934CE0ACF808CB996E188A /* Pods-Gram.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		7144448358D9462C2577C804 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D6F87B88669CE97C929A3354 /* Pods_Gram.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		FC23669F1D188F7B007A060E = {
 			isa = PBXGroup;
 			children = (
 				FC2366AA1D188F7B007A060E /* Gram */,
 				FC2366A91D188F7B007A060E /* Products */,
+				30027DB7BFA772B02457EDC4 /* Pods */,
+				7144448358D9462C2577C804 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,6 +86,7 @@
 				FC2366B21D188F7B007A060E /* Assets.xcassets */,
 				FC2366B41D188F7B007A060E /* LaunchScreen.storyboard */,
 				FC2366B71D188F7B007A060E /* Info.plist */,
+				FC2366BF1D1892F2007A060E /* LoginViewController.swift */,
 			);
 			path = Gram;
 			sourceTree = "<group>";
@@ -71,9 +98,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FC2366BA1D188F7B007A060E /* Build configuration list for PBXNativeTarget "Gram" */;
 			buildPhases = (
+				2403A154673F88F8235E633E /* [CP] Check Pods Manifest.lock */,
 				FC2366A41D188F7B007A060E /* Sources */,
 				FC2366A51D188F7B007A060E /* Frameworks */,
 				FC2366A61D188F7B007A060E /* Resources */,
+				0F6D0333F5D05DD8564CC18A /* [CP] Embed Pods Frameworks */,
+				3C43396F4C6762F3A069D54E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -130,11 +160,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0F6D0333F5D05DD8564CC18A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Gram/Pods-Gram-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2403A154673F88F8235E633E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		3C43396F4C6762F3A069D54E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Gram/Pods-Gram-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		FC2366A41D188F7B007A060E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC2366C01D1892F2007A060E /* LoginViewController.swift in Sources */,
 				FC2366AE1D188F7B007A060E /* ViewController.swift in Sources */,
 				FC2366AC1D188F7B007A060E /* AppDelegate.swift in Sources */,
 			);
@@ -247,6 +326,7 @@
 		};
 		FC2366BB1D188F7B007A060E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9F8A9894B93C8B07545C9B18 /* Pods-Gram.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Gram/Info.plist;
@@ -258,6 +338,7 @@
 		};
 		FC2366BC1D188F7B007A060E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 70934CE0ACF808CB996E188A /* Pods-Gram.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Gram/Info.plist;
@@ -286,6 +367,7 @@
 				FC2366BC1D188F7B007A060E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
