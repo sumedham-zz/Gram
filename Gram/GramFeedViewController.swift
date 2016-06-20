@@ -1,5 +1,5 @@
 //
-//  GramViewController.swift
+//  GramFeedViewController.swift
 //  Gram
 //
 //  Created by Sumedha Mehta on 6/20/16.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class GramViewController: UIViewController {
+class GramFeedViewController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -14,7 +14,9 @@
 		FC2366B31D188F7B007A060E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC2366B21D188F7B007A060E /* Assets.xcassets */; };
 		FC2366B61D188F7B007A060E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC2366B41D188F7B007A060E /* LaunchScreen.storyboard */; };
 		FC2366C01D1892F2007A060E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2366BF1D1892F2007A060E /* LoginViewController.swift */; };
-		FC2366C21D18A5EC007A060E /* GramViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2366C11D18A5EC007A060E /* GramViewController.swift */; };
+		FC2366C41D18ABEC007A060E /* GramFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2366C31D18ABEC007A060E /* GramFeedViewController.swift */; };
+		FC2366C61D18B132007A060E /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2366C51D18B132007A060E /* FeedViewController.swift */; };
+		FC2366C81D18B142007A060E /* MyGramViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2366C71D18B142007A060E /* MyGramViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,7 +31,9 @@
 		FC2366B51D188F7B007A060E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FC2366B71D188F7B007A060E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FC2366BF1D1892F2007A060E /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		FC2366C11D18A5EC007A060E /* GramViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GramViewController.swift; sourceTree = "<group>"; };
+		FC2366C31D18ABEC007A060E /* GramFeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GramFeedViewController.swift; sourceTree = "<group>"; };
+		FC2366C51D18B132007A060E /* FeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		FC2366C71D18B142007A060E /* MyGramViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyGramViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,7 +93,9 @@
 				FC2366B41D188F7B007A060E /* LaunchScreen.storyboard */,
 				FC2366B71D188F7B007A060E /* Info.plist */,
 				FC2366BF1D1892F2007A060E /* LoginViewController.swift */,
-				FC2366C11D18A5EC007A060E /* GramViewController.swift */,
+				FC2366C31D18ABEC007A060E /* GramFeedViewController.swift */,
+				FC2366C51D18B132007A060E /* FeedViewController.swift */,
+				FC2366C71D18B142007A060E /* MyGramViewController.swift */,
 			);
 			path = Gram;
 			sourceTree = "<group>";
@@ -217,9 +223,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC2366C01D1892F2007A060E /* LoginViewController.swift in Sources */,
-				FC2366C21D18A5EC007A060E /* GramViewController.swift in Sources */,
+				FC2366C81D18B142007A060E /* MyGramViewController.swift in Sources */,
 				FC2366AE1D188F7B007A060E /* ViewController.swift in Sources */,
+				FC2366C61D18B132007A060E /* FeedViewController.swift in Sources */,
 				FC2366AC1D188F7B007A060E /* AppDelegate.swift in Sources */,
+				FC2366C41D18ABEC007A060E /* GramFeedViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -58,61 +58,63 @@
                     <connections>
                         <outlet property="loginText" destination="EZd-xY-RI7" id="2j7-Gx-uS3"/>
                         <outlet property="passwordText" destination="CWX-ml-F6F" id="L6c-C6-bad"/>
-                        <segue destination="GiH-Dk-6nE" kind="modal" identifier="LoginSegue" id="Umk-H7-Qla"/>
+                        <segue destination="7hM-W9-09s" kind="modal" identifier="goToMain" id="F58-tS-e8q"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="130" y="330"/>
         </scene>
-        <!--Gram View Controller-->
-        <scene sceneID="nMr-RE-j0h">
-            <objects>
-                <viewController storyboardIdentifier="GramMain" id="GiH-Dk-6nE" customClass="GramViewController" customModule="Gram" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="XpD-cl-hYm">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="cLM-C1-XAv" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="580" y="330"/>
-        </scene>
-        <!--Item 2-->
+        <!--My Gram-->
         <scene sceneID="9DL-vU-emF">
             <objects>
-                <viewController id="ueT-cv-BDB" sceneMemberID="viewController">
+                <viewController id="ueT-cv-BDB" customClass="MyGramViewController" customModule="Gram" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eoN-ji-5kr">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="Ev1-mv-wzC"/>
+                    <tabBarItem key="tabBarItem" title="My Gram" id="Ev1-mv-wzC"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oLK-Ay-66M" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1114" y="1319"/>
+            <point key="canvasLocation" x="130" y="1747"/>
         </scene>
-        <!--Item 1-->
+        <!--Feed-->
         <scene sceneID="3Ko-Np-EQ9">
             <objects>
-                <viewController id="muG-MY-dr9" sceneMemberID="viewController">
+                <viewController id="muG-MY-dr9" customClass="FeedViewController" customModule="Gram" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tXZ-qm-gYG">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="6IS-se-Ecf">
+                                <rect key="frame" x="19" y="20" width="48" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Logout">
+                                    <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="onTapLogout:" destination="muG-MY-dr9" eventType="touchUpInside" id="cNp-oM-wlR"/>
+                                    <segue destination="BYZ-38-t0r" kind="modal" id="407-jP-JW7"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="hQq-M3-fuy"/>
+                    <tabBarItem key="tabBarItem" title="Feed" id="hQq-M3-fuy"/>
+                    <connections>
+                        <outlet property="logoutButton" destination="6IS-se-Ecf" id="asV-y5-87k"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PZm-ML-aDA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1130" y="639"/>
+            <point key="canvasLocation" x="-504" y="341"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Gram Feed View Controller-->
         <scene sceneID="hd4-y0-u2A">
             <objects>
-                <tabBarController id="7hM-W9-09s" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="GramMain" id="7hM-W9-09s" customClass="GramFeedViewController" customModule="Gram" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" id="2LV-DT-bzI">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -125,7 +127,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t2X-dg-ifQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="346" y="1041"/>
+            <point key="canvasLocation" x="130" y="1045"/>
         </scene>
     </scenes>
 </document>
