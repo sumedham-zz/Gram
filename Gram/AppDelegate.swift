@@ -23,6 +23,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 configuration.server = "https://calm-temple-50093.herokuapp.com/parse"
             })
         )
+        if PFUser.currentUser() != nil {
+            let mainStoryboard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let initialViewController: UIViewController = mainStoryboard.instantiateViewControllerWithIdentifier("GramMain") as UIViewController
+            self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
+            self.window?.rootViewController = initialViewController
+            self.window?.makeKeyAndVisible()
+        }
         return true
     }
 

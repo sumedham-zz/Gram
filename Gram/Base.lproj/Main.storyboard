@@ -65,10 +65,10 @@
             </objects>
             <point key="canvasLocation" x="130" y="330"/>
         </scene>
-        <!--View Controller-->
+        <!--Gram View Controller-->
         <scene sceneID="nMr-RE-j0h">
             <objects>
-                <viewController id="GiH-Dk-6nE" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GramMain" id="GiH-Dk-6nE" customClass="GramViewController" customModule="Gram" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XpD-cl-hYm">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -78,6 +78,54 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cLM-C1-XAv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="580" y="330"/>
+        </scene>
+        <!--Item 2-->
+        <scene sceneID="9DL-vU-emF">
+            <objects>
+                <viewController id="ueT-cv-BDB" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eoN-ji-5kr">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 2" id="Ev1-mv-wzC"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oLK-Ay-66M" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1114" y="1319"/>
+        </scene>
+        <!--Item 1-->
+        <scene sceneID="3Ko-Np-EQ9">
+            <objects>
+                <viewController id="muG-MY-dr9" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tXZ-qm-gYG">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 1" id="hQq-M3-fuy"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PZm-ML-aDA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1130" y="639"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="hd4-y0-u2A">
+            <objects>
+                <tabBarController id="7hM-W9-09s" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="2LV-DT-bzI">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="muG-MY-dr9" kind="relationship" relationship="viewControllers" id="QlW-cv-233"/>
+                        <segue destination="ueT-cv-BDB" kind="relationship" relationship="viewControllers" id="JcU-ma-bXU"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t2X-dg-ifQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="346" y="1041"/>
         </scene>
     </scenes>
 </document>
