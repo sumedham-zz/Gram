@@ -17,6 +17,7 @@
 		FC2366C41D18ABEC007A060E /* GramFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2366C31D18ABEC007A060E /* GramFeedViewController.swift */; };
 		FC2366C61D18B132007A060E /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2366C51D18B132007A060E /* FeedViewController.swift */; };
 		FC2366C81D18B142007A060E /* MyGramViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2366C71D18B142007A060E /* MyGramViewController.swift */; };
+		FC2366CC1D18EE2A007A060E /* TakePictureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2366CB1D18EE2A007A060E /* TakePictureViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		FC2366C31D18ABEC007A060E /* GramFeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GramFeedViewController.swift; sourceTree = "<group>"; };
 		FC2366C51D18B132007A060E /* FeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		FC2366C71D18B142007A060E /* MyGramViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyGramViewController.swift; sourceTree = "<group>"; };
+		FC2366CB1D18EE2A007A060E /* TakePictureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TakePictureViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 				FC2366C31D18ABEC007A060E /* GramFeedViewController.swift */,
 				FC2366C51D18B132007A060E /* FeedViewController.swift */,
 				FC2366C71D18B142007A060E /* MyGramViewController.swift */,
+				FC2366CB1D18EE2A007A060E /* TakePictureViewController.swift */,
 			);
 			path = Gram;
 			sourceTree = "<group>";
@@ -228,6 +231,7 @@
 				FC2366C61D18B132007A060E /* FeedViewController.swift in Sources */,
 				FC2366AC1D188F7B007A060E /* AppDelegate.swift in Sources */,
 				FC2366C41D18ABEC007A060E /* GramFeedViewController.swift in Sources */,
+				FC2366CC1D18EE2A007A060E /* TakePictureViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

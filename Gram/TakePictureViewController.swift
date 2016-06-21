@@ -1,5 +1,5 @@
 //
-//  FeedViewController.swift
+//  TakePictureViewController.swift
 //  Gram
 //
 //  Created by Sumedha Mehta on 6/20/16.
@@ -7,14 +7,10 @@
 //
 
 import UIKit
-import Parse
 
-class FeedViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class TakePictureViewController: UIViewController {
 
-    
-    @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var logoutButton: UIButton!
-        override func viewDidLoad() {
+    override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
@@ -25,19 +21,6 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func onTapLogout(sender: AnyObject) {
-        PFUser.logOutInBackgroundWithBlock { (error: NSError?) in
-        }
-    }
-    
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5;
-    }
-    
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("postCell", forIndexPath: indexPath)
-        return cell
-    }
 
     /*
     // MARK: - Navigation
