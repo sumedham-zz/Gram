@@ -49,7 +49,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         //FOR THE TABLEVIEW AND DATA
         getQuery(queryLimit)
-        NSTimer.scheduledTimerWithTimeInterval(10, target: self, selector: #selector(FeedViewController.onTimer), userInfo: nil, repeats: true)
+        NSTimer.scheduledTimerWithTimeInterval(2, target: self, selector: #selector(FeedViewController.onTimer), userInfo: nil, repeats: true)
         self.tableView.reloadData()
     
 
@@ -105,6 +105,8 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         instagramPost = image
         
         cell.postedCaptionLabel.text = caption as! String
+        
+        
         cell.userLabel.text = username
         return cell
     }

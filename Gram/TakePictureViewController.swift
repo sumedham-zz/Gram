@@ -13,6 +13,7 @@ class TakePictureViewController: UIViewController, UIImagePickerControllerDelega
 
     @IBOutlet weak var captionField: UITextField!
     @IBOutlet weak var selectedImage: UIImageView!
+    @IBOutlet weak var chooseImgLabel: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -46,20 +47,25 @@ class TakePictureViewController: UIViewController, UIImagePickerControllerDelega
         
         // Dismiss UIImagePickerController to go back to your original view controller
         dismissViewControllerAnimated(true, completion: nil)
+        if(selectedImage.image != nil) {
+            captionField.hidden = false
+            chooseImgLabel.hidden = true
+        }
     }
+    
+    
+    
+    
     
     @IBAction func onTapLoad(sender: AnyObject) {
         
-        if selectedImage.image  == nil {
-            
-        }
-            
-        else {
+        if selectedImage.image  != nil {
             let image = selectedImage.image
             let caption = captionField.text
             Post.postUserImage(image, withCaption: caption, withCompletion: nil)
-            
+            performSegueWithIdentifier("loadPictureSegue", sender: nil)
         }
+        
     }
         
         

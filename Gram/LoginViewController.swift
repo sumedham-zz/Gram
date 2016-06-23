@@ -43,6 +43,7 @@ class LoginViewController: UIViewController {
         newUser.signUpInBackgroundWithBlock { (success:Bool, error: NSError?) in
             if success {
                 print("Created a new User!")
+                self.performSegueWithIdentifier("goToMain", sender: nil)
                 
             }
             else {

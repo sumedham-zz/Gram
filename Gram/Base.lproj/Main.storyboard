@@ -67,7 +67,7 @@
             </objects>
             <point key="canvasLocation" x="130" y="330"/>
         </scene>
-        <!--New My Gram-->
+        <!--My Feed-->
         <scene sceneID="4hP-2W-RzU">
             <objects>
                 <viewController id="MkW-hp-obw" customClass="MyGramViewController" customModule="Gram" customModuleProvider="target" sceneMemberID="viewController">
@@ -76,24 +76,25 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="w7v-q2-XtS">
-                                <rect key="frame" x="0.0" y="184" width="320" height="384"/>
+                                <rect key="frame" x="10" y="183" width="300" height="365"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="rjc-r9-nFA">
-                                    <size key="itemSize" width="108" height="95"/>
+                                    <size key="itemSize" width="92" height="92"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="myPostCell" id="rd5-bk-hJH" customClass="MyPersonalCollectionViewCell" customModule="Gram" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="108" height="95"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="92" height="92"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="108" height="95"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="92" height="92"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="6um-MF-9uc" customClass="PFImageView">
-                                                    <rect key="frame" x="0.0" y="-7" width="108" height="111"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="92" height="92"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                             </subviews>
@@ -108,14 +109,14 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="New My Gram" id="nd3-Ge-qlY"/>
+                    <tabBarItem key="tabBarItem" title="My Feed" image="Image-1" id="nd3-Ge-qlY"/>
                     <connections>
                         <outlet property="collectionView" destination="w7v-q2-XtS" id="lTx-sa-k8d"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xic-hz-QbU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-354" y="1935"/>
+            <point key="canvasLocation" x="474" y="1919"/>
         </scene>
         <!--Feed-->
         <scene sceneID="3Ko-Np-EQ9">
@@ -125,19 +126,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="6IS-se-Ecf">
-                                <rect key="frame" x="20" y="20" width="48" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Logout">
-                                    <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="onTapLogout:" destination="muG-MY-dr9" eventType="touchUpInside" id="cNp-oM-wlR"/>
-                                    <segue destination="BYZ-38-t0r" kind="modal" id="407-jP-JW7"/>
-                                </connections>
-                            </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="341" sectionHeaderHeight="28" sectionFooterHeight="28" id="63U-8h-iH2">
-                                <rect key="frame" x="0.0" y="58" width="320" height="510"/>
+                                <rect key="frame" x="0.0" y="76" width="320" height="492"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -149,21 +139,21 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="NFH-EV-5qi" customClass="PFImageView">
-                                                    <rect key="frame" x="8" y="-7" width="304" height="304"/>
+                                                    <rect key="frame" x="8" y="23" width="304" height="280"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="zQO-yO-KPb">
-                                                    <rect key="frame" x="16" y="320" width="288" height="20.5"/>
+                                                    <rect key="frame" x="8" y="316" width="288" height="16.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="xsB-dF-JeB" userLabel="User">
-                                                    <rect key="frame" x="16" y="296" width="288" height="20.5"/>
+                                                    <rect key="frame" x="8" y="0.0" width="288" height="20.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                                    <color key="textColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -176,10 +166,29 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="6IS-se-Ecf">
+                                <rect key="frame" x="0.0" y="31" width="72" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Logout">
+                                    <color key="titleColor" red="1" green="0.0" blue="0.7210715902" alpha="0.63103945039999998" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="onTapLogout:" destination="muG-MY-dr9" eventType="touchUpInside" id="cNp-oM-wlR"/>
+                                    <segue destination="BYZ-38-t0r" kind="modal" id="407-jP-JW7"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GRAM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="vFK-0o-Gid">
+                                <rect key="frame" x="92" y="31" width="136" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="50"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Feed" id="hQq-M3-fuy"/>
+                    <tabBarItem key="tabBarItem" title="Feed" image="Image-2" id="hQq-M3-fuy"/>
                     <connections>
                         <outlet property="logoutButton" destination="6IS-se-Ecf" id="asV-y5-87k"/>
                         <outlet property="tableView" destination="63U-8h-iH2" id="Bcc-Li-dKm"/>
@@ -187,7 +196,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PZm-ML-aDA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-504" y="341"/>
+            <point key="canvasLocation" x="-473" y="330"/>
         </scene>
         <!--Gram Feed View Controller-->
         <scene sceneID="hd4-y0-u2A">
@@ -208,7 +217,7 @@
             </objects>
             <point key="canvasLocation" x="130" y="1045"/>
         </scene>
-        <!--Take PIcture-->
+        <!--Post-->
         <scene sceneID="ZkV-B6-dET">
             <objects>
                 <viewController id="iYI-Au-AfP" customClass="TakePictureViewController" customModule="Gram" customModuleProvider="target" sceneMemberID="viewController">
@@ -216,46 +225,54 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="kKn-F1-4CI">
-                                <rect key="frame" x="85" y="455" width="151" height="30"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="ZvG-6h-LWa">
+                                <rect key="frame" x="29" y="52" width="262" height="262"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Choose"/>
+                            </imageView>
+                            <textField hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Caption..." textAlignment="natural" minimumFontSize="17" id="1Sm-dP-f6D">
+                                <rect key="frame" x="23" y="328" width="262" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="1qo-jx-luX">
+                                <rect key="frame" x="0.0" y="474" width="320" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.7210715902" alpha="0.63103945039999998" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="26"/>
+                                <state key="normal" title="LOAD">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="onTapLoad:" destination="iYI-Au-AfP" eventType="touchUpInside" id="qEM-4a-siW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="kKn-F1-4CI">
+                                <rect key="frame" x="37" y="62" width="235" height="241"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="31"/>
+                                <state key="normal" title="Choose Image">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <action selector="onTapTakePicture:" destination="iYI-Au-AfP" eventType="touchUpInside" id="krE-pk-1VB"/>
                                     <segue destination="cHF-Na-VHa" kind="modal" id="oKY-LL-zXx"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="ZvG-6h-LWa">
-                                <rect key="frame" x="37" y="20" width="246" height="241"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="1qo-jx-luX">
-                                <rect key="frame" x="137" y="482" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Load"/>
-                                <connections>
-                                    <action selector="onTapLoad:" destination="iYI-Au-AfP" eventType="touchUpInside" id="qEM-4a-siW"/>
-                                    <segue destination="7hM-W9-09s" kind="modal" id="tD2-FK-aKp"/>
-                                </connections>
-                            </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Caption..." textAlignment="natural" minimumFontSize="17" id="1Sm-dP-f6D">
-                                <rect key="frame" x="37" y="269" width="246" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Take PIcture" id="Dsl-lb-FEb"/>
+                    <tabBarItem key="tabBarItem" title="Post" image="Image" id="Dsl-lb-FEb"/>
                     <connections>
                         <outlet property="captionField" destination="1Sm-dP-f6D" id="vEv-kw-Dmf"/>
+                        <outlet property="chooseImgLabel" destination="kKn-F1-4CI" id="v2l-71-JWX"/>
                         <outlet property="selectedImage" destination="ZvG-6h-LWa" id="kZZ-hO-XLp"/>
+                        <segue destination="7hM-W9-09s" kind="modal" identifier="loadPictureSegue" id="tUt-6W-c4a"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XwT-9F-CLC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="581" y="1943"/>
+            <point key="canvasLocation" x="-703" y="1045"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="HLb-zZ-m0X">
@@ -269,10 +286,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WFP-RF-nvw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1420" y="2013"/>
+            <point key="canvasLocation" x="-860" y="1935"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Image" width="24" height="24"/>
+        <image name="Image-1" width="24" height="24"/>
+        <image name="Image-2" width="24" height="24"/>
+    </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="tD2-FK-aKp"/>
+        <segue reference="tUt-6W-c4a"/>
     </inferredMetricsTieBreakers>
 </document>
