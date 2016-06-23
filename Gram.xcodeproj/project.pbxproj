@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		B921530142356CA2807E8FAC /* Pods_Gram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6F87B88669CE97C929A3354 /* Pods_Gram.framework */; };
 		FC2366AC1D188F7B007A060E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2366AB1D188F7B007A060E /* AppDelegate.swift */; };
-		FC2366AE1D188F7B007A060E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2366AD1D188F7B007A060E /* ViewController.swift */; };
 		FC2366B11D188F7B007A060E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC2366AF1D188F7B007A060E /* Main.storyboard */; };
 		FC2366B31D188F7B007A060E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC2366B21D188F7B007A060E /* Assets.xcassets */; };
 		FC2366B61D188F7B007A060E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC2366B41D188F7B007A060E /* LaunchScreen.storyboard */; };
@@ -18,6 +17,10 @@
 		FC2366C61D18B132007A060E /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2366C51D18B132007A060E /* FeedViewController.swift */; };
 		FC2366C81D18B142007A060E /* MyGramViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2366C71D18B142007A060E /* MyGramViewController.swift */; };
 		FC2366CC1D18EE2A007A060E /* TakePictureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2366CB1D18EE2A007A060E /* TakePictureViewController.swift */; };
+		FC2366D01D19F06D007A060E /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2366CF1D19F06D007A060E /* Post.swift */; };
+		FC2366D21D19F672007A060E /* PostCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2366D11D19F672007A060E /* PostCellTableViewCell.swift */; };
+		FC2366F41D1B382F007A060E /* InfiniteScrollActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2366F31D1B382F007A060E /* InfiniteScrollActivityView.swift */; };
+		FCB21D831D1B5684004CD15D /* MyPersonalCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2367031D1B4FBC007A060E /* MyPersonalCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,7 +29,6 @@
 		D6F87B88669CE97C929A3354 /* Pods_Gram.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Gram.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC2366A81D188F7B007A060E /* Gram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC2366AB1D188F7B007A060E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FC2366AD1D188F7B007A060E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FC2366B01D188F7B007A060E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FC2366B21D188F7B007A060E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FC2366B51D188F7B007A060E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -36,6 +38,10 @@
 		FC2366C51D18B132007A060E /* FeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		FC2366C71D18B142007A060E /* MyGramViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyGramViewController.swift; sourceTree = "<group>"; };
 		FC2366CB1D18EE2A007A060E /* TakePictureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TakePictureViewController.swift; sourceTree = "<group>"; };
+		FC2366CF1D19F06D007A060E /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		FC2366D11D19F672007A060E /* PostCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCellTableViewCell.swift; sourceTree = "<group>"; };
+		FC2366F31D1B382F007A060E /* InfiniteScrollActivityView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfiniteScrollActivityView.swift; sourceTree = "<group>"; };
+		FC2367031D1B4FBC007A060E /* MyPersonalCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPersonalCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,19 +94,30 @@
 		FC2366AA1D188F7B007A060E /* Gram */ = {
 			isa = PBXGroup;
 			children = (
+				FC2366D41D19F692007A060E /* View Controllers */,
 				FC2366AB1D188F7B007A060E /* AppDelegate.swift */,
-				FC2366AD1D188F7B007A060E /* ViewController.swift */,
 				FC2366AF1D188F7B007A060E /* Main.storyboard */,
 				FC2366B21D188F7B007A060E /* Assets.xcassets */,
 				FC2366B41D188F7B007A060E /* LaunchScreen.storyboard */,
 				FC2366B71D188F7B007A060E /* Info.plist */,
-				FC2366BF1D1892F2007A060E /* LoginViewController.swift */,
-				FC2366C31D18ABEC007A060E /* GramFeedViewController.swift */,
+				FC2366D11D19F672007A060E /* PostCellTableViewCell.swift */,
+				FC2366CF1D19F06D007A060E /* Post.swift */,
+				FC2367031D1B4FBC007A060E /* MyPersonalCollectionViewCell.swift */,
+			);
+			path = Gram;
+			sourceTree = "<group>";
+		};
+		FC2366D41D19F692007A060E /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
 				FC2366C51D18B132007A060E /* FeedViewController.swift */,
+				FC2366F31D1B382F007A060E /* InfiniteScrollActivityView.swift */,
+				FC2366C31D18ABEC007A060E /* GramFeedViewController.swift */,
+				FC2366BF1D1892F2007A060E /* LoginViewController.swift */,
 				FC2366C71D18B142007A060E /* MyGramViewController.swift */,
 				FC2366CB1D18EE2A007A060E /* TakePictureViewController.swift */,
 			);
-			path = Gram;
+			name = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -225,9 +242,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCB21D831D1B5684004CD15D /* MyPersonalCollectionViewCell.swift in Sources */,
+				FC2366F41D1B382F007A060E /* InfiniteScrollActivityView.swift in Sources */,
+				FC2366D21D19F672007A060E /* PostCellTableViewCell.swift in Sources */,
 				FC2366C01D1892F2007A060E /* LoginViewController.swift in Sources */,
 				FC2366C81D18B142007A060E /* MyGramViewController.swift in Sources */,
-				FC2366AE1D188F7B007A060E /* ViewController.swift in Sources */,
+				FC2366D01D19F06D007A060E /* Post.swift in Sources */,
 				FC2366C61D18B132007A060E /* FeedViewController.swift in Sources */,
 				FC2366AC1D188F7B007A060E /* AppDelegate.swift in Sources */,
 				FC2366C41D18ABEC007A060E /* GramFeedViewController.swift in Sources */,

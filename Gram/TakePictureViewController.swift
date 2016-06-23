@@ -7,9 +7,11 @@
 //
 
 import UIKit
+import Parse
 
 class TakePictureViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate{
 
+    @IBOutlet weak var captionField: UITextField!
     @IBOutlet weak var selectedImage: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,20 +49,34 @@ class TakePictureViewController: UIViewController, UIImagePickerControllerDelega
     }
     
     @IBAction func onTapLoad(sender: AnyObject) {
-        selectedImage.image = nil
+        
+        if selectedImage.image  == nil {
+            
+        }
+            
+        else {
+            let image = selectedImage.image
+            let caption = captionField.text
+            Post.postUserImage(image, withCaption: caption, withCompletion: nil)
+            
+        }
+    }
+        
+        
+        
+        
+        /*
+         // MARK: - Navigation
+         
+         // In a storyboard-based application, you will often want to do a little preparation before navigation
+         override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+         // Get the new view controller using segue.destinationViewController.
+         // Pass the selected object to the new view controller.
+         }
+         */
         
     }
-    
-    
 
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
-}
+

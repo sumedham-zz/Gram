@@ -67,20 +67,55 @@
             </objects>
             <point key="canvasLocation" x="130" y="330"/>
         </scene>
-        <!--My Gram-->
-        <scene sceneID="9DL-vU-emF">
+        <!--New My Gram-->
+        <scene sceneID="4hP-2W-RzU">
             <objects>
-                <viewController id="ueT-cv-BDB" customClass="MyGramViewController" customModule="Gram" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="eoN-ji-5kr">
+                <viewController id="MkW-hp-obw" customClass="MyGramViewController" customModule="Gram" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9DI-J9-DTG">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="w7v-q2-XtS">
+                                <rect key="frame" x="0.0" y="184" width="320" height="384"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="rjc-r9-nFA">
+                                    <size key="itemSize" width="108" height="95"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="myPostCell" id="rd5-bk-hJH" customClass="MyPersonalCollectionViewCell" customModule="Gram" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="108" height="95"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="108" height="95"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="6um-MF-9uc" customClass="PFImageView">
+                                                    <rect key="frame" x="0.0" y="-7" width="108" height="111"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <connections>
+                                            <outlet property="myImage" destination="6um-MF-9uc" id="OBf-g4-xVt"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="My Gram" id="Ev1-mv-wzC"/>
+                    <tabBarItem key="tabBarItem" title="New My Gram" id="nd3-Ge-qlY"/>
+                    <connections>
+                        <outlet property="collectionView" destination="w7v-q2-XtS" id="lTx-sa-k8d"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="oLK-Ay-66M" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xic-hz-QbU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="130" y="1747"/>
+            <point key="canvasLocation" x="-354" y="1935"/>
         </scene>
         <!--Feed-->
         <scene sceneID="3Ko-Np-EQ9">
@@ -101,18 +136,43 @@
                                     <segue destination="BYZ-38-t0r" kind="modal" id="407-jP-JW7"/>
                                 </connections>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="316" sectionHeaderHeight="28" sectionFooterHeight="28" id="63U-8h-iH2">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="341" sectionHeaderHeight="28" sectionFooterHeight="28" id="63U-8h-iH2">
                                 <rect key="frame" x="0.0" y="58" width="320" height="510"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="postCell" rowHeight="316" id="Uxe-OJ-OC9">
-                                        <rect key="frame" x="0.0" y="28" width="320" height="316"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="postCell" rowHeight="341" id="Uxe-OJ-OC9" customClass="PostCellTableViewCell" customModule="Gram" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="341"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Uxe-OJ-OC9" id="EhZ-Wm-8qp">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="315.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="340.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="NFH-EV-5qi" customClass="PFImageView">
+                                                    <rect key="frame" x="8" y="-7" width="304" height="304"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="zQO-yO-KPb">
+                                                    <rect key="frame" x="16" y="320" width="288" height="20.5"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="xsB-dF-JeB" userLabel="User">
+                                                    <rect key="frame" x="16" y="296" width="288" height="20.5"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="postedCaptionLabel" destination="zQO-yO-KPb" id="ug6-Zh-e4X"/>
+                                            <outlet property="postedImg" destination="NFH-EV-5qi" id="3XH-dL-qrm"/>
+                                            <outlet property="userLabel" destination="xsB-dF-JeB" id="slq-f1-Dnr"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -141,7 +201,7 @@
                     <connections>
                         <segue destination="muG-MY-dr9" kind="relationship" relationship="viewControllers" id="QlW-cv-233"/>
                         <segue destination="iYI-Au-AfP" kind="relationship" relationship="viewControllers" id="nDp-wL-epZ"/>
-                        <segue destination="ueT-cv-BDB" kind="relationship" relationship="viewControllers" id="JcU-ma-bXU"/>
+                        <segue destination="MkW-hp-obw" kind="relationship" relationship="viewControllers" id="4d9-xZ-1K3"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t2X-dg-ifQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -156,20 +216,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="ZvG-6h-LWa">
-                                <rect key="frame" x="37" y="20" width="246" height="241"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="1qo-jx-luX">
-                                <rect key="frame" x="137" y="307" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Load"/>
-                                <connections>
-                                    <action selector="onTapLoad:" destination="iYI-Au-AfP" eventType="touchUpInside" id="qEM-4a-siW"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="kKn-F1-4CI">
-                                <rect key="frame" x="85" y="269" width="151" height="30"/>
+                                <rect key="frame" x="85" y="455" width="151" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Choose"/>
                                 <connections>
@@ -177,17 +225,37 @@
                                     <segue destination="cHF-Na-VHa" kind="modal" id="oKY-LL-zXx"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="ZvG-6h-LWa">
+                                <rect key="frame" x="37" y="20" width="246" height="241"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="1qo-jx-luX">
+                                <rect key="frame" x="137" y="482" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Load"/>
+                                <connections>
+                                    <action selector="onTapLoad:" destination="iYI-Au-AfP" eventType="touchUpInside" id="qEM-4a-siW"/>
+                                    <segue destination="7hM-W9-09s" kind="modal" id="tD2-FK-aKp"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Caption..." textAlignment="natural" minimumFontSize="17" id="1Sm-dP-f6D">
+                                <rect key="frame" x="37" y="269" width="246" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Take PIcture" id="Dsl-lb-FEb"/>
                     <connections>
+                        <outlet property="captionField" destination="1Sm-dP-f6D" id="vEv-kw-Dmf"/>
                         <outlet property="selectedImage" destination="ZvG-6h-LWa" id="kZZ-hO-XLp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XwT-9F-CLC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="557" y="1255"/>
+            <point key="canvasLocation" x="581" y="1943"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="HLb-zZ-m0X">
@@ -201,7 +269,10 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WFP-RF-nvw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="960" y="1257"/>
+            <point key="canvasLocation" x="1420" y="2013"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="tD2-FK-aKp"/>
+    </inferredMetricsTieBreakers>
 </document>
