@@ -11,10 +11,10 @@ import Parse
 import ParseUI
 
 
-class MyGramViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+class MyGramViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     @IBOutlet weak var collectionView: UICollectionView!
-    @IBOutlet weak var profileImage: UIImageView!
+    @IBOutlet weak var profileImage: PFImageView!
     @IBOutlet weak var profileNameLabel: UILabel!
     @IBOutlet weak var setPicButton: UIButton!
     
@@ -23,11 +23,27 @@ class MyGramViewController: UIViewController, UICollectionViewDataSource, UIColl
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        profileImage.layer.cornerRadius = 50;
+        profileImage.layer.masksToBounds = true
+        setPicButton.layer.cornerRadius = 50;
+        setPicButton.layer.masksToBounds = true
         collectionView.dataSource = self
         collectionView.delegate = self
-         NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: #selector(FeedViewController.onTimer), userInfo: nil, repeats: true)
+        NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: #selector(FeedViewController.onTimer), userInfo: nil, repeats: true)
         getQuery(20)
         profileNameLabel.text = PFUser.currentUser()?.username
+        var instagramPP: PFObject! {
+            didSet {
+                if (instagramPP["ProfilePic"] as? PFFile) != nil {
+                    print("YO")
+                    profileImage.file = instagramPP["ProfilePic"] as?PFFile
+                    setPicButton.hidden = true
+                    profileImage.loadInBackground()
+                }
+            }
+        }
+        instagramPP = PFUser.currentUser()
+        
         
         
         // Do any additional setup after loading the view.
@@ -69,7 +85,7 @@ class MyGramViewController: UIViewController, UICollectionViewDataSource, UIColl
             (alert: UIAlertAction!) -> Void in
             print("choosePic")
             let vc = UIImagePickerController()
-            //vc.delegate  = self
+            vc.delegate  = self
             vc.allowsEditing = true
             vc.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
             self.presentViewController(vc, animated: true, completion: nil)
@@ -108,7 +124,7 @@ class MyGramViewController: UIViewController, UICollectionViewDataSource, UIColl
                     self.postObjects = objects
                 }
             } else {
-               print("Error: \(error!) \(error!.userInfo)")
+                print("Error: \(error!) \(error!.userInfo)")
             }
             self.collectionView.reloadData()
         }
@@ -127,9 +143,9 @@ class MyGramViewController: UIViewController, UICollectionViewDataSource, UIColl
         let editedImage = info[UIImagePickerControllerEditedImage] as! UIImage
         profileImage.image = editedImage
         let user = PFUser.currentUser()
-        let post = PFObject(className: "Post")
-        post["Profile Pic"] = Post.getPFFileFromImage(profileImage.image)
-        
+        let imagePFFile = Post.getPFFileFromImage(editedImage)
+        user!["ProfilePic"] = imagePFFile
+        user!.saveInBackground()
         
         
         // Do something with the images (based on your use case)
@@ -140,13 +156,15 @@ class MyGramViewController: UIViewController, UICollectionViewDataSource, UIColl
             setPicButton.hidden = true
         }
     }
-
+    
+    
+    
+    
+    
     
     
     
 }
-
-
 
 
 
