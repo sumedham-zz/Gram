@@ -14,6 +14,10 @@ import ParseUI
 class MyGramViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var profileImage: UIImageView!
+    @IBOutlet weak var profileNameLabel: UILabel!
+    @IBOutlet weak var setPicButton: UIButton!
+    
     var postObjects:  [PFObject] = []
     
     
@@ -21,8 +25,10 @@ class MyGramViewController: UIViewController, UICollectionViewDataSource, UIColl
         super.viewDidLoad()
         collectionView.dataSource = self
         collectionView.delegate = self
-         NSTimer.scheduledTimerWithTimeInterval(10, target: self, selector: #selector(FeedViewController.onTimer), userInfo: nil, repeats: true)
+         NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: #selector(FeedViewController.onTimer), userInfo: nil, repeats: true)
         getQuery(20)
+        profileNameLabel.text = PFUser.currentUser()?.username
+        
         
         // Do any additional setup after loading the view.
     }
@@ -52,11 +58,42 @@ class MyGramViewController: UIViewController, UICollectionViewDataSource, UIColl
         instagramPost = image
         
         return cell
-
-        
         
     }
     
+    @IBAction func onTapImage(sender: AnyObject) {
+        let optionMenu = UIAlertController(title: nil, message: "Choose Option", preferredStyle: .ActionSheet)
+        
+        
+        let choosePicture = UIAlertAction(title: "Choose Picture From Album", style: .Default, handler: {
+            (alert: UIAlertAction!) -> Void in
+            print("choosePic")
+            let vc = UIImagePickerController()
+            //vc.delegate  = self
+            vc.allowsEditing = true
+            vc.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
+            self.presentViewController(vc, animated: true, completion: nil)
+            
+        })
+        let takePicture = UIAlertAction(title: "Take Picture", style: .Default, handler: {
+            (alert: UIAlertAction!) -> Void in
+            print("fileSaved")
+        })
+        //
+        let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel, handler: {
+            (alert: UIAlertAction!) -> Void in
+            print("Cancelled")
+        })
+        
+        
+        // 4
+        optionMenu.addAction(choosePicture)
+        optionMenu.addAction(takePicture)
+        optionMenu.addAction(cancelAction)
+        
+        // 5
+        self.presentViewController(optionMenu, animated: true, completion: nil)
+    }
     
     func getQuery(limit: Int) {
         let query = PFQuery(className:"Post")
@@ -69,7 +106,6 @@ class MyGramViewController: UIViewController, UICollectionViewDataSource, UIColl
             if error == nil {
                 if let objects = objects {
                     self.postObjects = objects
-                    print(self.postObjects)
                 }
             } else {
                print("Error: \(error!) \(error!.userInfo)")
@@ -82,6 +118,31 @@ class MyGramViewController: UIViewController, UICollectionViewDataSource, UIColl
         getQuery(20)
         self.collectionView.reloadData()
     }
+    
+    
+    func imagePickerController(picker: UIImagePickerController,
+                               didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+        // Get the image captured by the UIImagePickerController
+        let originalImage = info[UIImagePickerControllerOriginalImage] as! UIImage
+        let editedImage = info[UIImagePickerControllerEditedImage] as! UIImage
+        profileImage.image = editedImage
+        let user = PFUser.currentUser()
+        let post = PFObject(className: "Post")
+        post["Profile Pic"] = Post.getPFFileFromImage(profileImage.image)
+        
+        
+        
+        // Do something with the images (based on your use case)
+        
+        // Dismiss UIImagePickerController to go back to your original view controller
+        dismissViewControllerAnimated(true, completion: nil)
+        if(profileImage.image != nil) {
+            setPicButton.hidden = true
+        }
+    }
+
+    
+    
     
 }
 

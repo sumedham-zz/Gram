@@ -96,6 +96,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         let caption = postObjects[indexPath.row]["caption"]
         let user = postObjects[indexPath.row]["author"]
         let username = user.username
+        let likeCount = postObjects[indexPath.row]["likesCount"] as! Int
         var instagramPost: PFObject! {
             didSet {
                 cell.postedImg.file = instagramPost["media"] as? PFFile
@@ -103,11 +104,11 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
             }
         }
         instagramPost = image
-        
         cell.postedCaptionLabel.text = caption as! String
-        
-        
         cell.userLabel.text = username
+        cell.likesCountLabel.text = String(likeCount)
+        cell.currentCount = likeCount
+        cell.objId = postObjects[indexPath.row].objectId!
         return cell
     }
     

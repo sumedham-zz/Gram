@@ -16,7 +16,8 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+        view.addGestureRecognizer(tap)
     }
 
     override func didReceiveMemoryWarning() {
@@ -55,7 +56,13 @@ class LoginViewController: UIViewController {
         }
         
     }
+    func dismissKeyboard(){
+        view.endEditing(true)
+        print("yo")
+    }
+    
     /*
+     @IBOutlet var onTapBackground: UITapGestureRecognizer!
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation

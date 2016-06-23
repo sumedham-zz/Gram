@@ -21,6 +21,7 @@
 		FC2366D21D19F672007A060E /* PostCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2366D11D19F672007A060E /* PostCellTableViewCell.swift */; };
 		FC2366F41D1B382F007A060E /* InfiniteScrollActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2366F31D1B382F007A060E /* InfiniteScrollActivityView.swift */; };
 		FCB21D831D1B5684004CD15D /* MyPersonalCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2367031D1B4FBC007A060E /* MyPersonalCollectionViewCell.swift */; };
+		FCC5B71A1D1C7DC9000694B8 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC5B7191D1C7DC9000694B8 /* ImageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		FC2366D11D19F672007A060E /* PostCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCellTableViewCell.swift; sourceTree = "<group>"; };
 		FC2366F31D1B382F007A060E /* InfiniteScrollActivityView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfiniteScrollActivityView.swift; sourceTree = "<group>"; };
 		FC2367031D1B4FBC007A060E /* MyPersonalCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPersonalCollectionViewCell.swift; sourceTree = "<group>"; };
+		FCC5B7191D1C7DC9000694B8 /* ImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				FC2366D11D19F672007A060E /* PostCellTableViewCell.swift */,
 				FC2366CF1D19F06D007A060E /* Post.swift */,
 				FC2367031D1B4FBC007A060E /* MyPersonalCollectionViewCell.swift */,
+				FCC5B7191D1C7DC9000694B8 /* ImageViewController.swift */,
 			);
 			path = Gram;
 			sourceTree = "<group>";
@@ -251,6 +254,7 @@
 				FC2366C61D18B132007A060E /* FeedViewController.swift in Sources */,
 				FC2366AC1D188F7B007A060E /* AppDelegate.swift in Sources */,
 				FC2366C41D18ABEC007A060E /* GramFeedViewController.swift in Sources */,
+				FCC5B71A1D1C7DC9000694B8 /* ImageViewController.swift in Sources */,
 				FC2366CC1D18EE2A007A060E /* TakePictureViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
