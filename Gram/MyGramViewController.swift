@@ -23,9 +23,9 @@ class MyGramViewController: UIViewController, UICollectionViewDataSource, UIColl
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        profileImage.layer.cornerRadius = 50;
+        profileImage.layer.cornerRadius = 45;
         profileImage.layer.masksToBounds = true
-        setPicButton.layer.cornerRadius = 50;
+        setPicButton.layer.cornerRadius = 45;
         setPicButton.layer.masksToBounds = true
         collectionView.dataSource = self
         collectionView.delegate = self
@@ -35,7 +35,6 @@ class MyGramViewController: UIViewController, UICollectionViewDataSource, UIColl
         var instagramPP: PFObject! {
             didSet {
                 if (instagramPP["ProfilePic"] as? PFFile) != nil {
-                    print("YO")
                     profileImage.file = instagramPP["ProfilePic"] as?PFFile
                     setPicButton.hidden = true
                     profileImage.loadInBackground()
@@ -93,7 +92,13 @@ class MyGramViewController: UIViewController, UICollectionViewDataSource, UIColl
         })
         let takePicture = UIAlertAction(title: "Take Picture", style: .Default, handler: {
             (alert: UIAlertAction!) -> Void in
-            print("fileSaved")
+            print("takePic")
+            let vc1 = UIImagePickerController()
+            vc1.delegate  = self
+            vc1.allowsEditing = true
+            vc1.sourceType = UIImagePickerControllerSourceType.Camera
+            self.presentViewController(vc1, animated: true, completion: nil)
+
         })
         //
         let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel, handler: {

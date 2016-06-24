@@ -118,7 +118,7 @@
                                 </cells>
                             </collectionView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="SKm-zb-os1" customClass="PFImageView">
-                                <rect key="frame" x="10" y="20" width="107" height="102"/>
+                                <rect key="frame" x="18" y="32" width="90" height="90"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="12" id="WBz-84-Q0h">
@@ -129,7 +129,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="abI-x1-ovX">
-                                <rect key="frame" x="10" y="20" width="107" height="102"/>
+                                <rect key="frame" x="18" y="32" width="90" height="90"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.55223331149999999" green="0.55223331149999999" blue="0.55223331149999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
@@ -165,6 +165,65 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cWJ-I5-sGO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="919" y="1918"/>
+        </scene>
+        <!--Image Detail View Controller-->
+        <scene sceneID="ANU-tj-6d2">
+            <objects>
+                <viewController id="UcW-fh-Dzx" customClass="ImageDetailViewController" customModule="Gram" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mrk-bG-8xt">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="k0j-uZ-F9X" customClass="PFImageView">
+                                <rect key="frame" x="20" y="54" width="280" height="285"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="dqY-te-XiK">
+                                <rect key="frame" x="20" y="347" width="79" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="XKp-1p-F6A">
+                                <rect key="frame" x="20" y="371" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image-4" id="PO6-Gb-RUa">
+                                <rect key="frame" x="272" y="353" width="28" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="sWq-DE-fiA">
+                                <rect key="frame" x="20" y="400" width="280" height="56"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="CXB-w1-ccn">
+                                <rect key="frame" x="248" y="353" width="23" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="captionLabel" destination="sWq-DE-fiA" id="nya-qT-Gu2"/>
+                        <outlet property="dateLabel" destination="XKp-1p-F6A" id="0Eb-jn-Fhj"/>
+                        <outlet property="likeNumberLabel" destination="CXB-w1-ccn" id="6uZ-ef-zqR"/>
+                        <outlet property="nameLabel" destination="dqY-te-XiK" id="t1S-7e-zBB"/>
+                        <outlet property="postImage" destination="k0j-uZ-F9X" id="ZAq-uD-Lft"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SZZ-0j-m6M" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-473" y="-346"/>
         </scene>
         <!--Feed-->
         <scene sceneID="3Ko-Np-EQ9">
@@ -230,6 +289,7 @@
                                             <outlet property="postedCaptionLabel" destination="zQO-yO-KPb" id="ug6-Zh-e4X"/>
                                             <outlet property="postedImg" destination="NFH-EV-5qi" id="3XH-dL-qrm"/>
                                             <outlet property="userLabel" destination="xsB-dF-JeB" id="slq-f1-Dnr"/>
+                                            <segue destination="UcW-fh-Dzx" kind="modal" identifier="goToDetails" id="4Ha-ob-3JJ"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

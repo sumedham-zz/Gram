@@ -139,6 +139,26 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         self.isMoreDataLoading = false
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let viewC = segue.destinationViewController as! ImageDetailViewController
+        let indexPath = tableView.indexPathForCell(sender as! UITableViewCell)
+        let post = postObjects[(indexPath!.row)]
+        let caption = postObjects[indexPath!.row]["caption"] as! String
+        let user = postObjects[indexPath!.row]["author"]
+        let username = user.username as String!
+        let likeCount = postObjects[indexPath!.row]["likesCount"] as! Int
+        viewC.postThing = post
+        viewC.nameText = String(username)
+        viewC.captionText = caption
+        print(likeCount)
+        viewC.likeCount = likeCount
+        
+        
+
+        
+        
+    }
+    
     func scrollViewDidScroll(scrollView: UIScrollView) {
             if (!self.isMoreDataLoading) {
             let scrollViewContentHeight = tableView.contentSize.height

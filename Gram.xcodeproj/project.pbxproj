@@ -22,6 +22,7 @@
 		FC2366F41D1B382F007A060E /* InfiniteScrollActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2366F31D1B382F007A060E /* InfiniteScrollActivityView.swift */; };
 		FCB21D831D1B5684004CD15D /* MyPersonalCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2367031D1B4FBC007A060E /* MyPersonalCollectionViewCell.swift */; };
 		FCC5B71A1D1C7DC9000694B8 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC5B7191D1C7DC9000694B8 /* ImageViewController.swift */; };
+		FCC614861D1CDD7000803DDC /* ImageDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC614851D1CDD7000803DDC /* ImageDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		FC2366F31D1B382F007A060E /* InfiniteScrollActivityView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfiniteScrollActivityView.swift; sourceTree = "<group>"; };
 		FC2367031D1B4FBC007A060E /* MyPersonalCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPersonalCollectionViewCell.swift; sourceTree = "<group>"; };
 		FCC5B7191D1C7DC9000694B8 /* ImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
+		FCC614851D1CDD7000803DDC /* ImageDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 			children = (
 				FC2366C51D18B132007A060E /* FeedViewController.swift */,
 				FC2366F31D1B382F007A060E /* InfiniteScrollActivityView.swift */,
+				FCC614851D1CDD7000803DDC /* ImageDetailViewController.swift */,
 				FC2366C31D18ABEC007A060E /* GramFeedViewController.swift */,
 				FC2366BF1D1892F2007A060E /* LoginViewController.swift */,
 				FC2366C71D18B142007A060E /* MyGramViewController.swift */,
@@ -252,6 +255,7 @@
 				FC2366C81D18B142007A060E /* MyGramViewController.swift in Sources */,
 				FC2366D01D19F06D007A060E /* Post.swift in Sources */,
 				FC2366C61D18B132007A060E /* FeedViewController.swift in Sources */,
+				FCC614861D1CDD7000803DDC /* ImageDetailViewController.swift in Sources */,
 				FC2366AC1D188F7B007A060E /* AppDelegate.swift in Sources */,
 				FC2366C41D18ABEC007A060E /* GramFeedViewController.swift in Sources */,
 				FCC5B71A1D1C7DC9000694B8 /* ImageViewController.swift in Sources */,
