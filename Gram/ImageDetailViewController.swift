@@ -45,6 +45,9 @@ class ImageDetailViewController: UIViewController {
     }
     
 
+    @IBAction func onTapBack(sender: AnyObject) {
+        shouldPerformSegueWithIdentifier("goBackToFeed", sender: nil)
+    }
     /*
     // MARK: - Navigation
 
