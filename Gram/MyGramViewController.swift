@@ -29,15 +29,15 @@ class MyGramViewController: UIViewController, UICollectionViewDataSource, UIColl
         setPicButton.layer.masksToBounds = true
         collectionView.dataSource = self
         collectionView.delegate = self
-        NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: #selector(FeedViewController.onTimer), userInfo: nil, repeats: true)
+        self.modalTransitionStyle = UIModalTransitionStyle.FlipHorizontal
         getQuery(20)
         profileNameLabel.text = PFUser.currentUser()?.username
         var instagramPP: PFObject! {
             didSet {
                 if (instagramPP["ProfilePic"] as? PFFile) != nil {
                     profileImage.file = instagramPP["ProfilePic"] as?PFFile
-                    setPicButton.hidden = true
                     profileImage.loadInBackground()
+                    setPicButton.backgroundColor = UIColor.clearColor()
                 }
             }
         }
@@ -120,6 +120,7 @@ class MyGramViewController: UIViewController, UICollectionViewDataSource, UIColl
         let query = PFQuery(className:"Post")
         query.orderByDescending("createdAt")
         query.includeKey("author")
+        print("WHY")
         query.whereKey("author", equalTo: PFUser.currentUser()!)
         query.limit = limit
         query.findObjectsInBackgroundWithBlock {
@@ -158,8 +159,17 @@ class MyGramViewController: UIViewController, UICollectionViewDataSource, UIColl
         // Dismiss UIImagePickerController to go back to your original view controller
         dismissViewControllerAnimated(true, completion: nil)
         if(profileImage.image != nil) {
-            setPicButton.hidden = true
+            setPicButton.backgroundColor = UIColor.clearColor()
         }
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let vc = segue.destinationViewController as! PersonalPicsDetailViewController
+        let indexPath = collectionView.indexPathForCell(sender as! UICollectionViewCell)
+        vc.Post = postObjects[indexPath!.row]
+        print(vc.Post)
+        
+        
     }
     
     

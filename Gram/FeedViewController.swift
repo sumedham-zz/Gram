@@ -15,16 +15,18 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var logoutButton: UIButton!
+    @IBOutlet weak var gramTitleLabel: UILabel!
     var postObjects:  [PFObject] = []
     var queryLimit = 3
     var queryAdd = 2
     var isMoreDataLoading = false
     var loadingMoreView: InfiniteScrollActivityView?
-    
+    let HeaderViewIdentifier = "TableViewHeaderView"
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        let titleLabel = gramTitleLabel
+        self.navigationItem.titleView = titleLabel
         
         //FOR THE INFINITE SCROLL -->
         let frame = CGRectMake(0, tableView.contentSize.height, tableView.bounds.size.width, InfiniteScrollActivityView.defaultHeight)
@@ -49,11 +51,13 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         //FOR THE TABLEVIEW AND DATA
         getQuery(queryLimit)
-        NSTimer.scheduledTimerWithTimeInterval(2, target: self, selector: #selector(FeedViewController.onTimer), userInfo: nil, repeats: true)
+        //NSTimer.scheduledTimerWithTimeInterval(2, target: self, selector: #selector(FeedViewController.onTimer), userInfo: nil, repeats: true)
+        onTimer()
         self.tableView.reloadData()
     
 
-        // Do any additional setup after loading the view.
+        // STICKY LABEL
+        tableView.registerClass(UITableViewHeaderFooterView.self, forHeaderFooterViewReuseIdentifier: HeaderViewIdentifier)
     }
     
     func refreshControlAction(refreshControl: UIRefreshControl) {
@@ -86,17 +90,21 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return postObjects.count
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("postCell", forIndexPath: indexPath) as! PostCellTableViewCell
-        let image = postObjects[indexPath.row]
-        let caption = postObjects[indexPath.row]["caption"]
-        let user = postObjects[indexPath.row]["author"]
-        let username = user.username
-        let likeCount = postObjects[indexPath.row]["likesCount"] as! Int
+        let image = postObjects[indexPath.section]
+        let user = postObjects[indexPath.section]["author"] as! PFUser
+        print(user)
+        let username = user.username! as String
+        print(username)
         var instagramPost: PFObject! {
             didSet {
                 cell.postedImg.file = instagramPost["media"] as? PFFile
@@ -104,12 +112,42 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
             }
         }
         instagramPost = image
-        cell.postedCaptionLabel.text = caption as! String
-        cell.userLabel.text = username
+        //cell.userLabel.text = String(username)
+        
+        cell.profPic.layer.cornerRadius = 20;
+        cell.profPic.layer.masksToBounds = true
+        var instagramPP: PFObject! {
+            didSet {
+                if (instagramPP["ProfilePic"] as? PFFile) != nil {
+                    cell.profPic.file = instagramPP["ProfilePic"] as?PFFile
+                    cell.profPic.loadInBackground()
+                }
+                else {
+                    cell.profPic.image = UIImage(named: "Image-5")
+                }
+            }
+        }
+        instagramPP = user
+        let caption = postObjects[indexPath.section]["caption"]
+        let likeCount = postObjects[indexPath.section]["likesCount"] as! Int
+        cell.captionLabel.text = caption as! String
         cell.likesCountLabel.text = String(likeCount)
+        cell.objId = postObjects[indexPath.section].objectId!
         cell.currentCount = likeCount
-        cell.objId = postObjects[indexPath.row].objectId!
+        
         return cell
+        
+    }
+    
+    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let header = tableView.dequeueReusableHeaderFooterViewWithIdentifier(HeaderViewIdentifier)! as UITableViewHeaderFooterView
+        header.textLabel!.text = postObjects[section]["author"].username
+        header.textLabel!.textColor = UIColor.orangeColor()
+        return header
+    }
+    
+    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 30
     }
     
     func onTimer() {
@@ -135,26 +173,35 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
                 // Log details of the failure
                 print("Error: \(error!) \(error!.userInfo)")
             }
+        self.tableView.reloadData()
         }
         self.isMoreDataLoading = false
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        let viewC = segue.destinationViewController as! ImageDetailViewController
-        let indexPath = tableView.indexPathForCell(sender as! UITableViewCell)
-        let post = postObjects[(indexPath!.row)]
-        let caption = postObjects[indexPath!.row]["caption"] as! String
-        let user = postObjects[indexPath!.row]["author"]
-        let username = user.username as String!
-        let likeCount = postObjects[indexPath!.row]["likesCount"] as! Int
-        viewC.postThing = post
-        viewC.nameText = String(username)
-        viewC.captionText = caption
-        print(likeCount)
-        viewC.likeCount = likeCount
+        if(segue.identifier == "detailsSegue") {
+            let viewC = segue.destinationViewController as! ImageDetailViewController
+            let indexPath = tableView.indexPathForCell(sender as! UITableViewCell)
+            let post = postObjects[(indexPath!.row)]
+            let caption = postObjects[indexPath!.row]["caption"] as! String
+            let user = postObjects[indexPath!.row]["author"]
+            let username = user.username as String!
+            let likeCount = postObjects[indexPath!.row]["likesCount"] as! Int
+            let date = postObjects[indexPath!.row]["timestamp"] as! String
+            viewC.postThing = post
+            viewC.nameText = String(username)
+            viewC.captionText = caption
+            print(likeCount)
+            viewC.likeCount = likeCount
+            viewC.dateText = date
+        }
+        else {
+            let viewC = segue.destinationViewController as! LoginViewController
+            print("whatup")
+        }
         
         
-
+        
         
         
     }

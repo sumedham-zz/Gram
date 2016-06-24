@@ -16,8 +16,6 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
-        view.addGestureRecognizer(tap)
     }
 
     override func didReceiveMemoryWarning() {
@@ -56,11 +54,7 @@ class LoginViewController: UIViewController {
         }
         
     }
-    func dismissKeyboard(){
-        view.endEditing(true)
-        print("yo")
-    }
-    
+
     /*
      @IBOutlet var onTapBackground: UITapGestureRecognizer!
     // MARK: - Navigation

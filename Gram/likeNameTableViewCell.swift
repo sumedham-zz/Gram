@@ -1,8 +1,8 @@
 //
-//  PostCellTableViewCell.swift
+//  likeNameTableViewCell.swift
 //  Gram
 //
-//  Created by Sumedha Mehta on 6/21/16.
+//  Created by Sumedha Mehta on 6/24/16.
 //  Copyright © 2016 Sumedha Mehta. All rights reserved.
 //
 
@@ -10,19 +10,15 @@ import UIKit
 import Parse
 import ParseUI
 
-class PostCellTableViewCell: UITableViewCell {
+class likeNameTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var postedImg: PFImageView!
-    @IBOutlet weak var profPic: PFImageView!
-    @IBOutlet weak var likeButton: UIButton!
-    @IBOutlet weak var likesCountLabel: UILabel!
+    @IBOutlet weak var likeNumLabel: UILabel!
     @IBOutlet weak var captionLabel: UILabel!
-    
+    @IBOutlet weak var likeButton: UIImageView!
     var currentCount: Int = 0
     var objId: String = ""
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
     override func setSelected(selected: Bool, animated: Bool) {
@@ -31,8 +27,7 @@ class PostCellTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    
-    @IBAction func onTap(sender: AnyObject) {
+    @IBAction func likeButtonPressed(sender: AnyObject) {
         currentCount = currentCount + 1
         var query = PFQuery(className:"Post")
         query.getObjectInBackgroundWithId(objId) {
@@ -44,11 +39,9 @@ class PostCellTableViewCell: UITableViewCell {
                 object!.saveInBackground()
             }
         }
-        likesCountLabel.text = String(currentCount)
+        
+        
         
     }
-    
-    
-    
 
 }
