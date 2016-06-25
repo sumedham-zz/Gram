@@ -250,18 +250,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="k0j-uZ-F9X" customClass="PFImageView">
+                                <rect key="frame" x="0.0" y="64" width="320" height="320"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="dqY-te-XiK">
                                 <rect key="frame" x="65" y="405" width="79" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="XKp-1p-F6A">
-                                <rect key="frame" x="137" y="405" width="136" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image-4" id="PO6-Gb-RUa">
@@ -297,10 +294,13 @@
                                 <rect key="frame" x="8" y="392" width="48" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="k0j-uZ-F9X" customClass="PFImageView">
-                                <rect key="frame" x="0.0" y="64" width="320" height="320"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="XKp-1p-F6A">
+                                <rect key="frame" x="64" y="424" width="136" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -446,15 +446,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="ZvG-6h-LWa">
-                                <rect key="frame" x="29" y="52" width="262" height="262"/>
+                                <rect key="frame" x="23" y="7" width="262" height="262"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <textField hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Caption..." textAlignment="natural" minimumFontSize="17" id="1Sm-dP-f6D">
-                                <rect key="frame" x="23" y="328" width="262" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="1qo-jx-luX">
                                 <rect key="frame" x="0.0" y="474" width="320" height="46"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -468,7 +462,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="kKn-F1-4CI">
-                                <rect key="frame" x="37" y="62" width="235" height="241"/>
+                                <rect key="frame" x="37" y="7" width="235" height="241"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="31"/>
                                 <state key="normal" title="Choose Image">
@@ -479,13 +473,123 @@
                                     <segue destination="cHF-Na-VHa" kind="modal" id="oKY-LL-zXx"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="8ys-qY-e3b">
+                                <rect key="frame" x="8" y="328" width="71" height="68"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="Eoe-DH-VCw">
+                                <rect key="frame" x="86" y="328" width="71" height="68"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="ao5-Qb-3q2">
+                                <rect key="frame" x="163" y="328" width="71" height="68"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="R8f-ub-vaR">
+                                <rect key="frame" x="240" y="328" width="71" height="68"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="K0b-dj-y0s">
+                                <rect key="frame" x="8" y="398" width="71" height="68"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="z4v-Gb-rhL">
+                                <rect key="frame" x="86" y="398" width="71" height="68"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="v5h-Vi-O10">
+                                <rect key="frame" x="163" y="398" width="71" height="68"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="YlN-77-RlC">
+                                <rect key="frame" x="240" y="398" width="71" height="68"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="RLy-OO-fVi">
+                                <rect key="frame" x="8" y="328" width="70" height="68"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="onTap1:" destination="iYI-Au-AfP" eventType="touchUpInside" id="e2u-tX-Lky"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="h2h-gQ-R8e">
+                                <rect key="frame" x="87" y="328" width="70" height="68"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="onTap2:" destination="iYI-Au-AfP" eventType="touchUpInside" id="FIJ-B1-L9O"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="0S6-Gy-Znw">
+                                <rect key="frame" x="165" y="328" width="70" height="68"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="onTap3:" destination="iYI-Au-AfP" eventType="touchUpInside" id="EXT-km-eRl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="mAq-zz-MxK">
+                                <rect key="frame" x="240" y="328" width="70" height="68"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="onTap4:" destination="iYI-Au-AfP" eventType="touchUpInside" id="JaS-Om-LuK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="XMH-5A-wMT">
+                                <rect key="frame" x="9" y="398" width="70" height="68"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="onTap5:" destination="iYI-Au-AfP" eventType="touchUpInside" id="QL4-WC-gUl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="vRB-Jo-rRV">
+                                <rect key="frame" x="87" y="398" width="70" height="68"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="onTap6:" destination="iYI-Au-AfP" eventType="touchUpInside" id="ljo-JW-asd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="W40-pO-G4v">
+                                <rect key="frame" x="162" y="398" width="70" height="68"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="onTap7:" destination="iYI-Au-AfP" eventType="touchUpInside" id="U0G-w7-vwl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="n2z-Bp-ZK5">
+                                <rect key="frame" x="242" y="398" width="70" height="68"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="onTap8:" destination="iYI-Au-AfP" eventType="touchUpInside" id="YNT-35-Tiv"/>
+                                </connections>
+                            </button>
+                            <textField hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Caption..." textAlignment="natural" minimumFontSize="17" id="1Sm-dP-f6D">
+                                <rect key="frame" x="23" y="283" width="262" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Post" image="Image" id="Dsl-lb-FEb"/>
                     <connections>
+                        <outlet property="button1" destination="RLy-OO-fVi" id="6E5-GI-5FL"/>
+                        <outlet property="button2" destination="h2h-gQ-R8e" id="WxX-sW-Fd7"/>
+                        <outlet property="button3" destination="0S6-Gy-Znw" id="S6b-Dg-MDP"/>
+                        <outlet property="button4" destination="mAq-zz-MxK" id="omu-6A-mDj"/>
+                        <outlet property="button5" destination="XMH-5A-wMT" id="55n-Ht-DyF"/>
+                        <outlet property="button6" destination="vRB-Jo-rRV" id="oVD-VO-1Yk"/>
+                        <outlet property="button7" destination="W40-pO-G4v" id="GO9-et-qk0"/>
+                        <outlet property="button8" destination="n2z-Bp-ZK5" id="hoz-Bv-2xO"/>
                         <outlet property="captionField" destination="1Sm-dP-f6D" id="vEv-kw-Dmf"/>
                         <outlet property="chooseImgLabel" destination="kKn-F1-4CI" id="v2l-71-JWX"/>
+                        <outlet property="filter1" destination="8ys-qY-e3b" id="Psn-PT-Byn"/>
+                        <outlet property="filter2" destination="Eoe-DH-VCw" id="wgd-go-XwO"/>
+                        <outlet property="filter3" destination="ao5-Qb-3q2" id="qhp-Hw-xbJ"/>
+                        <outlet property="filter4" destination="R8f-ub-vaR" id="ZkQ-om-JaA"/>
+                        <outlet property="filter5" destination="K0b-dj-y0s" id="McK-U4-ABN"/>
+                        <outlet property="filter6" destination="z4v-Gb-rhL" id="wGk-KR-Ief"/>
+                        <outlet property="filter7" destination="v5h-Vi-O10" id="xwF-JL-kCB"/>
+                        <outlet property="filter8" destination="YlN-77-RlC" id="TPn-o3-JXj"/>
                         <outlet property="selectedImage" destination="ZvG-6h-LWa" id="kZZ-hO-XLp"/>
                         <segue destination="7hM-W9-09s" kind="modal" identifier="loadPictureSegue" id="tUt-6W-c4a"/>
                     </connections>
@@ -536,7 +640,7 @@
         <image name="Image-6" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="F58-tS-e8q"/>
+        <segue reference="tUt-6W-c4a"/>
         <segue reference="096-Mm-MeW"/>
     </inferredMetricsTieBreakers>
 </document>

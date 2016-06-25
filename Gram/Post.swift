@@ -24,7 +24,9 @@ class Post: NSObject {
     class func postUserImage(image: UIImage?, withCaption caption: String?, withCompletion completion: PFBooleanResultBlock?) {
         // Create Parse object PFObject
         let post = PFObject(className: "Post")
-        
+        let image1 = image as UIImage!
+        print(image1)
+        print(caption!)
         // Add relevant fields to the object
         post["media"] = getPFFileFromImage(image) // PFFile column type
         post["author"] = PFUser.currentUser() // Pointer column type that points to PFUser

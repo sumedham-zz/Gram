@@ -182,12 +182,13 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         if(segue.identifier == "detailsSegue") {
             let viewC = segue.destinationViewController as! ImageDetailViewController
             let indexPath = tableView.indexPathForCell(sender as! UITableViewCell)
-            let post = postObjects[(indexPath!.row)]
-            let caption = postObjects[indexPath!.row]["caption"] as! String
-            let user = postObjects[indexPath!.row]["author"]
+            let post = postObjects[(indexPath!.section)]
+            print(indexPath!.row)
+            let caption = post["caption"] as! String
+            let user = post["author"]
             let username = user.username as String!
-            let likeCount = postObjects[indexPath!.row]["likesCount"] as! Int
-            let date = postObjects[indexPath!.row]["timestamp"] as! String
+            let likeCount = post["likesCount"] as! Int
+            let date = post["timestamp"] as! String
             viewC.postThing = post
             viewC.nameText = String(username)
             viewC.captionText = caption
