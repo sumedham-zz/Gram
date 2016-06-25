@@ -30,6 +30,7 @@ class PersonalPicsDetailViewController: UIViewController {
         usernameLabel.text = person.username
         likeCountLabel.text = String(Post!["likesCount"])
         captionLabel.text = String(Post!["caption"])
+        timeLabel.text = String(Post!["timestamp"])
         var instagramPost: PFObject! {
             didSet {
                 postImage.file = instagramPost["media"] as? PFFile
